@@ -13,7 +13,7 @@ export default function AdminUsers() {
   // If your backend expects just the raw token (not Bearer), change the line below accordingly.
   const authedApi = useMemo(() => {
     const instance = api;
-    instance.defaults.headers.common.Authorization = `Bearer ${token}`;
+    instance.defaults.headers.common.Authorization = token;
     return instance;
   }, [token]);
 
